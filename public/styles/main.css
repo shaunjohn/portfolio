@@ -22,10 +22,11 @@ body {
   background-color: #FFFFFF;
   box-sizing: border-box;
   min-height: 100%;
+  color: white;
 }
 
 .powderslide {
-  background-color: #beebff;
+  background-color: #c0392b;
 }
 
 footer {
@@ -39,7 +40,6 @@ body.open {
 
 .app-bar {
   display: block;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -102,7 +102,7 @@ body.open {
   width: 60px;
   height: 60px;
   background-image: none;
-  background-color: #beebff;
+  background-color: #c0392b;
   border: none;
   padding: 0;
   -webkit-transition: background-color 0.2s ease-out;
@@ -227,16 +227,19 @@ button.menu img {
 
 
 main {
-  margin: 0 auto;
   /* Height of the header */
   padding: 60px 16px 16px 16px;
-  min-height: 75% !important;
+  min-height: 100% !important;
+  background-color: #334657;
+  min-width: 100%;
 }
+
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   .app-bar {
     position: relative;
+    display: none;
   }
 
   .app-bar.open,
@@ -284,15 +287,7 @@ main {
   }
 
   .navdrawer-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 130px;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    -webkit-transition: none;
-            transition: none;
-    overflow-y: auto;
+    display: none;
   }
 
   .navdrawer-container h4 {
@@ -315,9 +310,10 @@ main {
   }
 
   main {
-    max-width: 864px;
-    padding-top: 0;
     min-height: initial;
+    padding-top: 15vw;
+    background-color: #334657;
+    min-width: 100%;
   }
 
   body {
@@ -327,6 +323,16 @@ main {
   .navdrawer-container {
     position: relative;
     margin-top: 0;
+  }
+
+  .powderslide {
+  max-width: 50%;
+  }
+
+  .about {
+  top: 0px;
+  height: 992px;
+  max-width: 50%;
   }
 }
 
