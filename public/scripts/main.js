@@ -1,15 +1,19 @@
- //Sticky Nav for the About Secitions
+ //Sticky Nav for the About Sections
 $(document).ready(function() {
-  var stickyNavTop = $('#about-header').offset().top;
+  var stickyNavTop = $('#left_home').offset().top;
+  var stickyNavBottom = $('#blog').offset().top;
   var stickyNav = function(){
-    var scrollTop = $(window).scrollTop();    
+    var scrollTop = $(window).scrollTop();
     if (scrollTop > stickyNavTop) { 
-      $('#about-header').addClass('sticky');
+      $('#left_home').addClass('sticky');
     } else {
-      $('#about-header').removeClass('sticky'); 
-    }
+      $('#left_home').removeClass('sticky'); 
+    } 
+
+    if (scrollTop > stickyNavBottom) { 
+      $('#left_home').removeClass('sticky');
+    } 
   };
-  stickyNav(); 
   $(window).scroll(function() {
     stickyNav();
   });
